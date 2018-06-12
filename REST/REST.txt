@@ -1,0 +1,15 @@
+TO install REST Framework=>
+
+pip install djangorestframework
+
+
+What Serializer does in the context of An API ?
+
+Translates To and From The JSON. JSON object is made up of lists and dictionaries.Serialzer deserializes the combination of lists and dictionaries into an application object.
+
+Model Serializer shows us the relevant infomation to our model.It also can create new models or new objects in model.It also can update the object. We can create this by our own by creating functions of our own instead of using the REST Framework.
+
+ModelViewSet class takes care of lot of stuff for us.Typically we have to handle every single case(like Get request,POST request ,PUT or Delete).But these are all prestandard methods in a REST api and everyone knows what to do, and because its so consistent and probably we can use the ModelViewSet.
+
+routers take care of generating all the urls(GET,PUT,POST,DELETE) for the model.Django REST Framework helps us to do this easiy if we do it in the very standard and consistent way.
+

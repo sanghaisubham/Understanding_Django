@@ -1,0 +1,79 @@
+Web Framework is a way to create web apps for a particular programming language 
+
+Django 2.0 doesn't require to use Regular expression.
+
+
+Manage.py=>1)Allows us to run commands that are relevant to our django project. 
+           2)Allows us to run development server.
+	   3)Allows to perform migrations
+	   4)Allows to use shell for specific purposes
+	   5)Allows us to create superuser.
+           6)interface to run django directly on command line
+      
+init.py=>
+
+setting.py=>
+
+Default DB=>sqlite 
+
+urls.py=> Tell django where to send requests from browser . 
+
+admin=>allows us to register models so that we can see that on our dashboard.
+
+apps=>allows us to change configuration of our app.
+
+models=>helps us to add models (tables in DB) to our python 
+
+views=>Url sends to this location after any particular link is called.
+
+python manage.py migrate create the sqltie db we can see.
+(migrations add the tables in the database)
+
+
+Initially there are only two tables in the database :
+
+=>Groups 
+=>Users
+
+=>If we dont create folders under templates file with the name of the app , then it might happen , 
+that we have other apps too and all the templates gets mixed.
+
+=>Curly bracket with % means a commands need to follow  and it need to do something. Its like calling a function inside our template
+
+=>Models are mapping between the python code and Tables and Rows in our DB.Any change in Models is reflected in The DB
+Steps Used while working on Django
+
+=>Migrations are code,that Django uses to put something in the database
+
+=>On doing make migrations a migrations folder is created with files describing the Tables and attributes created
+
+=>Double Curly brackets used to get the actual value
+
+=>csrf_token is used for security purpose and verifys that the form data is coming from the page generating the form and not from someone else
+
+=>We render to a page and redirect to a view
+1)Creating the project Name: 
+ 
+django-admin startproject projectname
+
+2)cd to the folder created
+
+3)Create an app:
+
+python manage.py startapp appname
+
+4)Add app to settings manually
+
+5)Add url to urls.py of main project:
+
+url(r'^webapp/', include('webapp.urls')
+
+6)Add the views in webapp
+
+7)Create urls file in webapp to say we have reached here, then display the view
+
+8)Create model and add model in admin.py
+
+9)python manage.py to make migrations
+
+10)python manage.py migrate => To create migration files and run It.
