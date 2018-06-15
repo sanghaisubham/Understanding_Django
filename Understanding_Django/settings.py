@@ -126,3 +126,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL='/'
+
+REST_FRAMEWORK={
+    'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAuthenticatedOrReadOnly',)
+    } 
+    #rest_framework.permissions.AllowAny , anyone can do anything
+    #rest_framework.permissions.IsAuthenticated , noyone can see anything
+    
+    #All the views in app should have permission

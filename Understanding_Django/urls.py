@@ -22,5 +22,6 @@ urlpatterns = [
     path('todo/',include('ToDo.urls')),
     path('authenticate/',include('Authentication.urls')),
     path('accounts/',include('django.contrib.auth.urls')),#Give some Urls needed for user management system
-    path('REST/',include('REST.urls'))
+    path('REST/',include('REST.urls')),
+    path('api-auth/',include('rest_framework.urls'))
 ]
